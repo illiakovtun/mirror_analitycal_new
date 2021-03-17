@@ -25,14 +25,17 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding: 10px;
 }
 .paging_button {
-	width: 30px;
+	width: 36px;
 	height: 30px;
 	text-align: center;
 	line-height: 30px;
 	cursor: pointer;
 	user-select: none;
+	font-weight: 500;
+	margin: 0 5px;
 	@include font_family;
 	@include color;
 }

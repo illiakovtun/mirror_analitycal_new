@@ -6,6 +6,7 @@ import Header from "../components/Header";
 // import Holdings from "../components/Holdings";
 import Performance from "../components/Performance";
 import List from "../components/List";
+import style from "./Portfolio.module.scss";
 
 // Data for List will be fetched from api in future
 
@@ -203,19 +204,21 @@ const Portfolio = () => {
 	return (
 		<>
 			<Header />
-			<Performance />
-			<Chart />
-			{/* <Holdings /> */}
-			<List
-				title="Holdings"
-				columns={holdingColumns}
-				rows={holdingRows}
-				subTitle="Total holding value"
-				span="1500 UST"
-			/>
-			<Graph />
-			{/* <Eventlog /> */}
-			<List title="Event Log" columns={eventColumns} rows={eventRows} subTitle={null} span={null} />
+			<div className={style.widgets_wrapper}>
+				<Performance />
+				<Chart />
+				{/* <Holdings /> */}
+				<List
+					title="Holdings"
+					columns={holdingColumns}
+					rows={holdingRows}
+					subTitle="Total holding value"
+					span="1500 UST"
+				/>
+				<Graph />
+				{/* <Eventlog /> */}
+				<List title="Event Log" columns={eventColumns} rows={eventRows} subTitle={null} span={null} />
+			</div>
 		</>
 	);
 };
